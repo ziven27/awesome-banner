@@ -1,0 +1,186 @@
+html, body { height: 100%; }
+body { margin: 0; font: 14px/20px 'PingFangSC-Light', 'helvetica neue', 'hiragino sans gb', 'arial', 'microsoft yahei ui', 'microsoft yahei', simsun, sans-serif; }
+i { font-style: normal; }
+strong { font-weight: normal; }
+.stage { height: 100%; }
+.banner { background-color: #1f424e; background-image: linear-gradient(-139deg, #000, #1f424e); overflow: hidden; position: relative; }
+.banner .s_center, .banner .s_center_per { position: absolute; top: 50%; left: 50%; }
+.banner .s_center_per { transform: translate3d(-50%, -50%, 0); }
+.banner canvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.banner .s_bg img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.banner .s_bg { position: absolute; top: 0; left: 0; height: 100%; width: 100%; opacity: 0; animation: opacityIn 2s 1.3s forwards; }
+.banner .s_cloud { width: 34%; padding-top: 34%; transform: translate(-19%, -49%); content: ""; background: url(cloud.png) top right no-repeat; background-size: 100%; opacity: 0; animation: opacityIn 0.3s 2s forwards; }
+@keyframes opacityIn {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+/*logo*/
+.banner .s_logo { height: 48px; width: 48px; }
+.banner .s_logo i, .banner .s_logo b { border: solid #fff; position: absolute; width: 25px; height: 17px; z-index: 5; }
+.banner .s_logo i:before, .banner .s_logo b:before { content: ""; position: absolute; width: 5px; height: 4px; }
+.banner .s_logo i:before { left: 100%; top: -9px; border-top: 5px dashed transparent; border-left: 5px solid #fff; }
+.banner .s_logo b:before { right: 100%; bottom: -9px; border-bottom: 5px dashed transparent; border-right: 5px solid #fff; }
+.banner .s_logo i { left: 0; top: 0; border-width: 9px 0 9px 9px; border-radius: 11px 0 0 11px; }
+.banner .s_logo b { right: 0; bottom: 0; border-width: 9px 9px 9px 0; border-radius: 0 11px 11px 0; }
+
+/*logo-容器变小*/
+.banner .s_logo_sigle { height: 100%; width: 100%; animation: rotate 1s linear; transform: translate3d(-50%, -50%, 0) rotate(270deg); }
+@keyframes rotate {
+	20% { height: 80%; width: 80%; }
+	40% { height: 10%; width: 10%; }
+	60% { height: 15%; width: 15%; }
+	100% { height: 48px; width: 48px; transform: translate3d(-50%, -50%, 0) rotate(0); }
+}
+
+/*俩蝴蝶*/
+.banner .s_logo_sigle i, .banner .s_logo_sigle b { animation: logoRotate 0.2s linear 5; box-shadow: 0 0 10px rgba(255, 255, 255, 0.6); }
+@keyframes logoRotate {
+	0 { transform: rotateX(0); }
+	30% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.6); }
+	50% { box-shadow: 0 0 30px rgba(255, 255, 255, 0.6); }
+	80% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.6); }
+	100% { transform: rotateX(360deg); }
+}
+
+/*logo*/
+.banner .s_logo_box { width: 200px; height: 48px; color: #fff; }
+.banner .s_logo_cn, .banner .s_logo_en { position: absolute; right: 0; font-style: normal; text-align: center; width: 135px; }
+.banner .s_logo_cn { top: 0; line-height: 30px; font-size: 28px; font-weight: bold; }
+.banner .s_logo_en { bottom: 0; line-height: 16px; font-size: 13px; }
+.banner .s_logo_box .s_logo { margin-left: -59px; }
+.banner .s_logo_box_show .s_logo { margin-left: 0; visibility: hidden; animation: logoMove 1s forwards; }
+@keyframes logoMove {
+	100% { visibility: visible; margin-left: -59px; }
+}
+.banner .s_logo_box_show .s_logo_cn, .banner .s_logo_box_show .s_logo_en { margin-right: -20px; opacity: 0; animation: logoTxt 0.5s forwards; }
+@keyframes logoTxt {
+	100% { margin-right: 0; opacity: 1; }
+}
+.banner .s_logo_box_shadow { opacity: 0; animation: logoShadow 0.3s cubic-bezier(0.215, .61, .355, 1) 2; }
+@keyframes logoShadow {
+	0% { opacity: 1; }
+	100% { opacity: 0; transform: translate3d(-50%, -50%, 0) scale(1.5); }
+}
+.banner .s_logo_box_show { transform: translate3d(-50%, -50%, 0) scale(1); animation: hideLogo 0.3s ease-out forwards; opacity: 1; }
+@keyframes hideLogo {
+	100% { transform: translate3d(-50%, -50%, 0) scale(0.3); opacity: 0; }
+}
+
+/*地球*/
+.banner .s_earth_box { transform: translate3d(-50%, -50%, 0) scale(0); width: 40%; padding-top: 40%; animation: earthBox 0.6s cubic-bezier(0.215, .61, .355, 1) forwards; }
+@keyframes earthBox {
+	100% { transform: translate3d(-50%, -50%, 0) scale(1); }
+}
+.banner .s_earth { position: absolute; top: 50%; left: 50%; background: url(earth.png) center center no-repeat; background-size: 100%; transform: translate3d(-50%, -50%, 0); }
+.banner .s_earth_s { width: 60%; padding-top: 60%; opacity: 0.8; animation: rolling 20s linear 2s infinite; }
+.banner .s_earth_m { width: 80%; padding-top: 80%; opacity: 0.4; animation: rollingm 30s linear 2s infinite; }
+.banner .s_earth_l { width: 100%; padding-top: 100%; opacity: 0.4; animation: rolling 50s linear 2s infinite; }
+
+/*旋转*/
+@keyframes rolling {
+	from { transform: translate3d(-50%, -50%, 0) rotate(0); }
+	to { transform: translate3d(-50%, -50%, 0) rotate(360deg); }
+}
+@keyframes rollingm {
+	from { transform: translate3d(-50%, -50%, 0) rotate(0); }
+	to { transform: translate3d(-50%, -50%, 0) rotate(-360deg); }
+}
+
+/*文字*/
+.banner .s_t { position: absolute; height: 0; overflow: hidden; padding-top: 12%; width: 12%; background-repeat: no-repeat; background-size: 100%; background-position: center; animation: textOut 0.3s cubic-bezier(0.215, .61, .355, 1) forwards; transform: scale3d(0, 0, 0); opacity: 0; }
+.banner .s_t1 { bottom: 50%; right: 50%; margin-right: 12%; background-image: url(font/xia@2x.png); }
+.banner .s_t2 { bottom: 50%; right: 50%; background-image: url(font/zhi@2x.png); }
+.banner .s_t3 { bottom: 50%; left: 50%; background-image: url(font/da@2x.png); }
+.banner .s_t4 { bottom: 50%; left: 50%; margin-left: 12%; background-image: url(font/zhe@2x.png); }
+.banner .s_t5 { top: 50%; right: 50%; margin-right: 12%; background-image: url(font/wei@2x.png); }
+.banner .s_t6 { top: 50%; right: 50%; background-image: url(font/guo@2x.png); }
+.banner .s_t7 { top: 50%; left: 50%; background-image: url(font/wei@2x.png); }
+.banner .s_t8 { top: 50%; left: 50%; margin-left: 12%; background-image: url(font/ming@2x.png); }
+.banner .s_t_out .s_t { opacity: 1; }
+@keyframes textOut {
+	50% { transform: scale3d(1.2, 1.2, 1.2); }
+	100% { transform: scale3d(1, 1, 1); opacity: 1; }
+}
+
+/*边框*/
+.banner .s_b { position: absolute; width: 0; height: 0; overflow: hidden; border: solid #fff; opacity: 0.5; }
+.banner .s_b_tr { top: 20%; right: 20%; border-width: 1px 1px 0 0; animation: border1 1s forwards; }
+.banner .s_b_bl { bottom: 20%; left: 20%; border-width: 0 0 1px 1px; animation: border2 1s forwards; }
+@keyframes border1 {
+	0% { width: 0; height: 0; }
+	50% { width: 90%; height: 90%; }
+	99% { overflow: hidden; }
+	100% { overflow: visible; width: 13%; height: 4%; opacity: 1; border-width: 2px 2px 0 0; }
+}
+@keyframes border2 {
+	0% { width: 0; height: 0; }
+	50% { width: 90%; height: 90%; }
+	99% { overflow: hidden; }
+	100% { overflow: visible; width: 13%; height: 4%; opacity: 1; border-width: 0 0 2px 2px; }
+}
+.banner .s_b:before { position: absolute; content: ""; width: 7px; height: 10px; border-radius: 50%; background-color: #fff; }
+.banner .s_b_tr:before { top: 100%; right: -5px; margin-top: 5px; }
+.banner .s_b_bl:before { bottom: 100%; left: -5px; margin-bottom: 5px; }
+
+/*图腾*/
+.banner .s_tt, .banner .s_tt i, .banner .s_tt1:before, .banner .s_tt1:after { position: absolute; top: 50%; }
+.banner .s_tt { left: 5%; width: 113px; height: 49px; margin-top: -24px; }
+.banner .s_tt1 { right: 5%; width: 0; border-top: 1px solid #fff; animation: tt1 0.6s forwards; }
+.banner .s_tt1:before, .banner .s_tt1:after { content: ''; right: -10px; width: 20px; border-top: 1px solid #ddd; margin-top: -1px; opacity: 0; }
+.banner .s_tt1:before { animation: tt1b 0.3s forwards; }
+.banner .s_tt1:after { animation: tt1a 0.3s forwards; }
+.banner .s_tt2, .banner .s_tt3 { position: absolute; top: 50%; margin-top: -13px; height: 26px; border: solid #fff; }
+.banner .s_tt2 { left: 9px; width: 13px; border-width: 1px 0 1px 1px; border-radius: 13px 0 0 13px; transform:translate3d(12px, 0, 0); opacity: 0; animation: tt2 0.3s forwards;}
+.banner .s_tt3 { left: 21px; width: 26px; border-width: 1px; border-radius: 50%; transform: rotate(180deg) scale3d(0,0,0); animation: tt3 0.3s forwards; }
+.banner .s_tt3:before { position: absolute; content: ""; height: 26px; left: 50%; border-left: 1px solid #fff; }
+.banner .s_tt4 { position: absolute; border-left: 1px solid #fff; border-bottom: 1px solid #fff; top: 50%; left: 42px; width: 34px; height: 34px; transform: translate3d(12px, -50%, 0) rotate(45deg); animation: tt4 0.3s forwards; opacity: 0; }
+
+@keyframes tt1 {
+	100% { width: 95%; }
+}
+@keyframes tt1b {
+	100% { transform: rotate(45deg); width: 20px; opacity: 1; }
+}
+@keyframes tt1a {
+	100% { transform: rotate(-45deg); width: 20px; opacity: 1; }
+}
+@keyframes tt2 {
+	100% { transform:translate3d(0, 0, 0); opacity: 1; }
+}
+@keyframes tt3 {
+	100% { transform: rotate(0) scale3d(1, 1, 1); }
+}
+@keyframes tt4 {
+	100% { transform: translate3d(0, -50%, 0) rotate(45deg); opacity: 1;  }
+}
+.banner .s_tt_copy{ left: auto; right: 5%; transform: scaleX(-1); }
+/*层叠位置*/
+.banner .s_earth_box { z-index: 1; }
+.banner .s_cloud { z-index: 2; }
+.banner canvas { z-index: 3; }
+.banner .s_logo, .banner .s_logo_box_shadow { z-index: 5; }
+.banner .s_logo_box_show { z-index: 5; }
+.banner .s_t { z-index: 6; }
+
+/*时间轴*/
+.banner .s_logo_sigle, .banner .s_logo_sigle i, .banner .s_logo_sigle b { animation-delay: 0.3s; }
+.banner .s_logo_box_show .s_logo { animation-delay: 1.3s; }
+.banner .s_logo_box_show .s_logo_cn { animation-delay: 1.6s; }
+.banner .s_logo_box_show .s_logo_en { animation-delay: 1.8s; }
+.banner .s_logo_box_shadow { animation-delay: 2.3s; }
+.banner .s_logo_box_show, .banner .s_earth_box { animation-delay: 3.2s; }
+.banner .s_t_out .s_t1 { animation-delay: 3.6s; }
+.banner .s_t_out .s_t2 { animation-delay: 3.7s; }
+.banner .s_t_out .s_t3 { animation-delay: 3.8s; }
+.banner .s_t_out .s_t4 { animation-delay: 3.9s; }
+.banner .s_t_out .s_t5 { animation-delay: 3.9s; }
+.banner .s_t_out .s_t6 { animation-delay: 3.8s; }
+.banner .s_t_out .s_t7 { animation-delay: 3.7s; }
+.banner .s_t_out .s_t8 { animation-delay: 3.6s; }
+.banner .s_b { animation-delay: 4s; }
+
+.banner .s_tt1, .banner .s_tt1:before, .banner .s_tt1:after{ animation-delay: 4.3s; }
+.banner .s_tt3{ animation-delay: 4.4s; }
+.banner .s_tt4{ animation-delay: 4.5s; }
+.banner .s_tt2{ animation-delay: 4.6s; }
