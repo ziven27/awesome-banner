@@ -1,0 +1,45 @@
+/*文字*/
+.banner { .s_t { position: absolute; height: 0; padding-top: 12%; width: 12%; cursor: pointer; opacity: 0; animation: textOut 0.3s cubic-bezier(0.215, .61, .355, 1) forwards; transform: scale3d(0, 0, 0); }
+	.s_t span, .s_guo, .s_mark { position: absolute; background-repeat: no-repeat; background-size: 100%; background-position: center; }
+	.s_t span, .s_guo { top: 0; left: 0; right: 0; bottom: 0; }
+	.s_t span {  color: transparent; }
+	
+	.s_t1 { bottom: 50%; right: 50%; margin-right: 12%; }
+	.s_t2 { bottom: 50%; right: 50%; }
+	.s_t3 { bottom: 50%; left: 50%; }
+	.s_t4 { bottom: 50%; left: 50%; margin-left: 12%; }
+	.s_t5 { top: 50%; right: 50%; margin-right: 12%; }
+	.s_t6 { top: 50%; right: 50%; }
+	.s_t7 { top: 50%; left: 50%; }
+	.s_t8 { top: 50%; left: 50%; margin-left: 12%; }
+	.s_t1 span { background-image: url(../img/font/xia@2x.png); }
+	.s_t2 span { background-image: url(../img/font/zhi@2x.png); }
+	.s_t3 span { background-image: url(../img/font/da@2x.png); }
+	.s_t4 span { background-image: url(../img/font/zhe@2x.png); }
+	.s_t5 span { background-image: url(../img/font/wei@2x.png); }
+	.s_t6 span { background-image: url(../img/font/guo@2x.png); }
+	.s_t7 span { background-image: url(../img/font/wei@2x.png); }
+	.s_t8 span { background-image: url(../img/font/ming@2x.png); }
+	.s_guo { background-image: url(../img/font/guoMask@2x.png); }
+	.s_mark { transition: opacity 0.6s ease-out; background-image: url(../img/font/mark@2x.png); width: 30%; padding-top: 30%; height: 0; transform: rotate(0); opacity: 0; }
+	.s_t6 .s_mark { top: -3%; right: 3%; transform: rotate(-60deg); }
+	.s_t8 .s_mark { bottom: 26%; right: -2%; }
+	.s_t6 span:before, .s_t8 span:before { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; margin: auto; z-index: -1; animation: clickMe 3s ease-out infinite; visibility: hidden; background-repeat: no-repeat; background-size: 100%; background-position: center; opacity: 0.5; -webkit-filter: blur(5px);}
+	.s_t6 span:before{ background-image: url(../img/font/guo-f@2x.png.png); }
+	.s_t8 span:before{ background-image: url(../img/font/ming-f@2x.png); }
+	.s_t6 span, .s_t8 span{ transition: transform 0.3s;}
+	.s_t6:active span, .s_t8:active span { transform: scale3d(0.95, 0.95, 0.95); }
+	.s_t:hover .s_mark { transition: all 0.6s ease-out; opacity: 1; }
+	.s_t6:hover .s_mark { transform: rotate(300deg); }
+	.s_t8:hover .s_mark { transform: rotate(360deg); }
+}
+@keyframes textOut {
+	50% { transform: scale3d(1.2, 1.2, 1.2); }
+	100% { transform: scale3d(1, 1, 1); opacity: 1; }
+}
+
+@keyframes clickMe {	
+	0%,11%{ transform:scale3d(1,1,1); opacity: 0.8; visibility: hidden; }
+	10%,20%{ transform:scale3d(1.2,1.2,1.2); opacity: 0; visibility: visible; }
+	21%{ visibility: hidden; }
+}

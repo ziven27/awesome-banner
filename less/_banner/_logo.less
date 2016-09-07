@@ -1,0 +1,53 @@
+/*logo*/
+.banner .s_logo { height: 48px; width: 48px; }
+.banner .s_logo i, .banner .s_logo b { border: solid #fff; position: absolute; width: 25px; height: 17px; z-index: 5;  }
+.banner .s_logo i:before, .banner .s_logo b:before { content: ""; position: absolute; width: 5px; height: 4px; }
+.banner .s_logo i:before { left: 100%; top: -9px; border-top: 5px dashed transparent; border-left: 5px solid #fff; }
+.banner .s_logo b:before { right: 100%; bottom: -9px; border-bottom: 5px dashed transparent; border-right: 5px solid #fff; }
+.banner .s_logo i { left: 0; top: 0; border-width: 9px 0 9px 9px; border-radius: 11px 0 0 11px; }
+.banner .s_logo b { right: 0; bottom: 0; border-width: 9px 9px 9px 0; border-radius: 0 11px 11px 0; }
+/*logo-容器变小*/
+.banner .s_logo_sigle { height: 100%; width: 100%; }
+.banner .s_logo_sigle i, .banner .s_logo_sigle b{ box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);  }
+/*logo*/
+.banner .s_logo_box { width: 200px; height: 48px; color: #fff; }
+.banner .s_logo_cn, .banner .s_logo_en { position: absolute; right: 0; font-style: normal; text-align: center; width: 135px; -webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
+  	-moz-font-feature-settings: "liga","kern";}
+.banner .s_logo_cn { top: 0; line-height: 30px; font-size: 28px; font-weight: bold; }
+.banner .s_logo_en { bottom: 0; line-height: 16px; font-size: 13px; }
+.banner .s_logo_box_shadow { -webkit-filter: blur(5px);}
+
+
+/*logo*/
+.banner .s_logo_sigle{ animation: rotate 1s linear; transform: rotate(270deg); }
+@keyframes rotate {
+	20% { height: 80%; width: 80%; }
+	40% { height: 10%; width: 10%; }
+	60% { height: 15%; width: 15%; }
+	100% { height: 48px; width: 48px; transform: rotate(0); }
+}
+.banner .s_logo_sigle i, .banner .s_logo_sigle b { animation: logoRotate 0.2s linear 5; }
+@keyframes logoRotate {
+	100% { transform: rotateX(360deg); }
+}
+
+.banner .s_logo_box .s_logo { transform: translate3d(-59px, 0, 0);}
+.banner .s_logo_box_show .s_logo { transform: translate3d(0, 0, 0); visibility: hidden; animation: logoMove 1s forwards; }
+@keyframes logoMove {
+	100% { visibility: visible; transform: translate3d(-59px, 0, 0); }
+}
+.banner .s_logo_box_show .s_logo_cn, 
+.banner .s_logo_box_show .s_logo_en { transform: translate3d(20px, 0, 0); opacity: 0; animation: logoTxt 0.5s forwards; }
+@keyframes logoTxt {
+	100% { transform: translate3d(0, 0, 0); opacity: 1; }
+}
+.banner .s_logo_box_shadow { opacity: 0; animation: logoShadow 0.3s cubic-bezier(0.215, .61, .355, 1) 2; }
+@keyframes logoShadow {
+	0% { opacity: 1; }
+	100% { opacity: 0; transform:scale(1.3); }
+}
+.banner .s_logo_box_show { transform: scale(1); animation: hideLogo 0.3s ease-out forwards; opacity: 1; }
+@keyframes hideLogo {
+	100% { transform: scale(0.3); opacity: 0; }
+}

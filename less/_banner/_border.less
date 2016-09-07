@@ -1,0 +1,21 @@
+/*边框*/
+.banner .s_b { position: absolute; width: 0; height: 0; overflow: hidden; border: solid #fff; opacity: 0.5; }
+.banner .s_b_tr { top: 20%; right: 20%; border-width: 1px 1px 0 0;  }
+.banner .s_b_bl { bottom: 20%; left: 20%; border-width: 0 0 1px 1px;}
+.banner .s_b:before { position: absolute; content: ""; width: 7px; height: 10px; border-radius: 50%; background-color: #fff; }
+.banner .s_b_tr:before { top: 100%; right: -5px; margin-top: 5px; }
+.banner .s_b_bl:before { bottom: 100%; left: -5px; margin-bottom: 5px; }
+.banner .s_b_tr{ animation: borderTr 1s forwards; }
+@keyframes borderTr {
+	0% { width: 0; height: 0; }
+	50% { width: 90%; height: 90%; }
+	99% { overflow: hidden; }
+	100% { overflow: visible; width: 13%; height: 4%; opacity: 1; border-width: 2px 2px 0 0; }
+}
+.banner .s_b_bl{ animation: borderBl 1s forwards; }
+@keyframes borderBl {
+	0% { width: 0; height: 0; }
+	50% { width: 90%; height: 90%; }
+	99% { overflow: hidden; }
+	100% { overflow: visible; width: 13%; height: 4%; opacity: 1; border-width: 0 0 2px 2px; }
+}

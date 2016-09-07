@@ -1,0 +1,18 @@
+/*地球*/
+.banner .s_earth_box { width: 35%; padding-top: 35%; opacity: 0; transform:scale(10); animation: earthBox 0.6s cubic-bezier(0.215, .61, .355, 1) forwards;  }
+.banner .s_earth { background: url(../img/earth.png) center center no-repeat; background-size: 100%; }
+.banner .s_earth_s, .banner .s_earth_l{ animation: rolling 60s linear 2s infinite;  }
+.banner .s_earth_s { width: 60%; padding-top: 60%; }
+.banner .s_earth_m { width: 80%; padding-top: 80%; opacity: 0.4; animation: rollingm 60s linear 2s infinite; }
+.banner .s_earth_l { width: 100%; padding-top: 100%; opacity: 0.6; }
+@keyframes earthBox {
+	100% { transform:scale(1); opacity: 1; }
+}
+@keyframes rolling {
+	from { transform:rotate(0); }
+	to { transform:rotate(360deg); }
+}
+@keyframes rollingm {
+	from { transform:rotate(0); }
+	to { transform:rotate(-360deg); }
+}

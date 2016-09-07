@@ -4,78 +4,116 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title>ks</title>
-		<link href="style.css" rel="stylesheet">
+		<link href="css/base.css" rel="stylesheet">
+
+		<!--[if !IE]>--> 
+		<link href="css/banner.css" rel="stylesheet">
+		<!--<![endif]-->
+
+		<!--[if IE]> 
+		<link href="css/bannerIe.css" rel="stylesheet">
+		<![endif]-->
 	</head>
 	<body>
+		<!--[if !IE]>--> 
 		<div class="stage banner">
-				<!-- 单个logo -->
-				<span class="s_logo s_logo_sigle s_center_per"><i></i><b></b></span>
+			<!-- 单个logo -->
+			<span class="s_logo s_logo_sigle s_auto"><i></i><b></b></span>
 
-				<!-- 完整logo -->
-				<div class="s_logo_box s_logo_box_show s_center_per">
-					<span class="s_logo s_center_per"><i></i><b></b></span>
-					<strong class="s_logo_cn">知道创宇</strong>
-					<small class="s_logo_en">KNOWNSEC.COM</small>
-				</div>
+			<!-- 完整logo -->
+			<div class="s_logo_box s_logo_box_show s_auto">
+				<span class="s_logo s_auto"><i></i><b></b></span>
+				<strong class="s_logo_cn">LOGO</strong>
+				<small class="s_logo_en">ZIVEN27.COM</small>
+			</div>
 
-				<!-- 完整logo2 -->
-				<div class="s_logo_box s_logo_box_shadow s_center_per">
-					<span class="s_logo s_center_per"><i></i><b></b></span>
-					<strong class="s_logo_cn">知道创宇</strong>
-					<small class="s_logo_en">KNOWNSEC.COM</small>
-				</div>
-								
-				<!-- 黑云 -->
-				<i class="s_cloud s_center"></i>				
-				
-				<canvas></canvas>
-				<!-- 地球 -->
-				<div class="s_earth_box s_center">
-					<i class="s_earth s_earth_s"></i>
-					<i class="s_earth s_earth_m"></i>
-					<i class="s_earth s_earth_l"></i>
-				</div>
-				
-				<!-- 背景 -->
-				<div class="s_bg"><img src="banner.jpg" height="3840" width="1664" alt=""></div>
-
-				<div class="s_t_out">
-					<i class="s_t s_t1">侠</i>
-					<i class="s_t s_t2">之</i>
-					<i class="s_t s_t3">大</i>
-					<i class="s_t s_t4">者</i>
-					<i class="s_t s_t5">为</i>
-					<i class="s_t s_t6">国</i>
-					<i class="s_t s_t7">为</i>
-					<i class="s_t s_t8">名</i>
-				</div>
-
-				<!-- 边框 -->
-				<i class="s_b s_b_tr"></i>
-				<i class="s_b s_b_bl"></i>
-
-				<!-- 图腾 -->
+			<!-- 完整logo2 -->
+			<div class="s_logo_box s_logo_box_shadow s_auto">
+				<span class="s_logo s_auto"><i></i><b></b></span>
+				<strong class="s_logo_cn">LOGO</strong>
+				<small class="s_logo_en">ZIVEN27.COM</small>
+			</div>
+			
+			<!-- 黑云 -->
+			<i class="s_cloud s_center"></i>			
+			<canvas></canvas>
+			<!-- 地球 -->
+			<div class="s_earth_box s_auto">
+				<i class="s_earth s_earth_s s_auto"></i>
+				<i class="s_earth s_earth_m s_auto"></i>
+				<i class="s_earth s_earth_l s_auto"></i>
+			</div>
+			
+			<!-- 背景 -->
+			<img class="s_bg" src="img/banner.jpg" height="3840" width="1664" alt="">
+			<div class="s_t_out s_t_out_ani">
+				<i class="s_t s_t1"><span>侠</span></i>
+				<i class="s_t s_t2"><span>之</span></i>
+				<i class="s_t s_t3"><span>大</span></i>
+				<i class="s_t s_t4"><span>者</span></i>
+				<i class="s_t s_t5"><span>为</span></i>
+				<i class="s_t s_t6"><span>国<i class="s_mark"></i><i class="s_guo"></i></span></i>
+				<i class="s_t s_t7"><span>为</span></i>
+				<i class="s_t s_t8"><span>名<i class="s_mark"></i></span></i>
+			</div>
+			<!-- 边框 -->
+			<i class="s_b s_b_tr"></i>
+			<i class="s_b s_b_bl"></i>
+			<!-- 图腾 -->
+			<div class="s_tt_box">
 				<div class="s_tt">
 					<i class="s_tt1"></i>
 					<i class="s_tt2"></i>
 					<i class="s_tt3"></i>
 					<i class="s_tt4"></i>
-					<i class="s_tt5"></i>
 				</div>
-
-				<div class="s_tt s_tt_copy">
+				<div class="s_tm">
+					<i class="s_tm1"></i>
+					<i class="s_tc s_tc1"></i>
+					<i class="s_tc s_tc2"></i>
+					<i class="s_tc s_tc3"></i>
+					<i class="s_tc s_tc4"></i>
+					<i class="s_tc s_tc5"></i>
+					<i class="s_tc s_tc6"></i>
+				</div>
+				<i class="s_tl"></i>
+			</div>
+			
+			<!-- 图腾镜像 -->
+			<div class="s_tt_box s_tt_box_copy">
+				<div class="s_tt">
 					<i class="s_tt1"></i>
 					<i class="s_tt2"></i>
 					<i class="s_tt3"></i>
 					<i class="s_tt4"></i>
-					<i class="s_tt5"></i>
 				</div>
-
-
-				
-
+				<div class="s_tm">
+					<i class="s_tm1"></i>
+					<i class="s_tc s_tc1"></i>
+					<i class="s_tc s_tc2"></i>
+					<i class="s_tc s_tc3"></i>
+					<i class="s_tc s_tc4"></i>
+					<i class="s_tc s_tc5"></i>
+					<i class="s_tc s_tc6"></i>
+				</div>
+				<i class="s_tl"></i>
+			</div>			
 		</div>
-		<div class="stage"></div>
-		<script src="canvas.js"></script>
+		<script>
+			!function(a,b){function h(a){a=a||0,this.style="rgba(255,255,255, 0.6)"}function k(){this.x=Math.random()*c.width,this.y=Math.random()*c.height,this.vx=-.5+Math.random(),this.vy=-.5+Math.random(),this.radius=2*Math.random(),this.color=new h}function l(){for(i=0;i<f.nb;i++)f.array.push(new k)}function m(){for(i=0;i<f.nb;i++){var a=f.array[i];a.y<0||a.y>c.height?(a.vx=a.vx,a.vy=-a.vy):(a.x<0||a.x>c.width)&&(a.vx=-a.vx,a.vy=a.vy),a.x+=a.vx,a.y+=a.vy}}function n(){for(i=0;i<f.nb;i++)for(j=0;j<f.nb;j++)i_dot=f.array[i],j_dot=f.array[j],i_dot.x-j_dot.x<f.distance&&i_dot.y-j_dot.y<f.distance&&i_dot.x-j_dot.x>-f.distance&&i_dot.y-j_dot.y>-f.distance&&i_dot.x-e.x<f.d_radius&&i_dot.y-e.y<f.d_radius&&i_dot.x-e.x>-f.d_radius&&i_dot.y-e.y>-f.d_radius&&(d.beginPath(),d.strokeStyle="rgba(255,255,255, 0.6)",d.moveTo(i_dot.x,i_dot.y),d.lineTo(j_dot.x,j_dot.y),d.stroke(),d.closePath())}function o(){for(i=0;i<f.nb;i++){var a=f.array[i];a.draw()}}function p(){d.clearRect(0,0,c.width,c.height),m(),n(),o(),requestAnimationFrame(p)}var c=b.querySelector("canvas"),d=c.getContext("2d");c.width=a.innerWidth,c.height=a.innerHeight,d.lineWidth=.3,d.strokeStyle=new h(150).style;var e={x:30*c.width/100,y:30*c.height/100},f={nb:130,distance:50,d_radius:100,array:[]};k.prototype={draw:function(){d.beginPath(),d.fillStyle=this.color.style,d.arc(this.x,this.y,this.radius,0,2*Math.PI,!1),d.fill()}},c.addEventListener("mousemove",function(a){e.x=a.pageX,e.y=a.pageY}),c.addEventListener("mouseleave",function(a){e.x=c.width/2,e.y=c.height/2}),l(),requestAnimationFrame(p)}(window,document);
+		</script>
+		<!--<![endif]-->
+
+		<!--[if IE]> 
+		<div class="stage banner">
+			<div class="s_qj">
+				<div class="s_qj_ph"><img  src="img/ie/banner-qj.png" width="1364" height="473" alt=""></div>
+			</div>
+		</div>
+		<![endif]-->
+
+		<div class="stage">
+		</div>
+
 	</body>
 </html>

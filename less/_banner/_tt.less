@@ -1,0 +1,67 @@
+/*图腾*/
+.banner .s_tt_box { z-index: 30; position: absolute; height: 180px; margin-top: -90px; width: 195px; top: 50%; right: 82%; overflow: hidden; }
+.banner .s_tt_box_copy { left: 82%; transform: scaleX(-1); }
+.banner .s_tt, .banner .s_tt i, .banner .s_tt1:before, .banner .s_tt1:after { position: absolute; top: 50%; }
+.banner .s_tt { left: 0%; width: 113px; height: 49px; margin-top: -24px; }
+.banner .s_tt1 { right: 5%; width: 0; height: 1px; background-color: #fff; animation: tt1 0.6s forwards; }
+.banner .s_tt1:before, .banner .s_tt1:after { content: ''; right: -10px; width: 20px; height: 1px; background-color: #fff; border-radius: 1px;  opacity: 0; }
+.banner .s_tt2, .banner .s_tt3 { position: absolute; top: 50%; margin-top: -13px; height: 26px; border: solid #fff; }
+.banner .s_tt2 { left: 9px; width: 13px; border-width: 1px 0 1px 1px; border-radius: 13px 0 0 13px; transform: translate3d(12px, 0, 0); opacity: 0; animation: tt2 0.3s forwards; }
+.banner .s_tt3 { left: 21px; width: 26px; border-width: 1px; border-radius: 50%; transform: rotate(180deg) scale3d(0, 0, 0); animation: tt3 0.3s forwards;}
+.banner .s_tt3:before { position: absolute; content: ""; height: 26px; left: 50%; border-left: 1px solid #fff; }
+.banner .s_tt4 { position: absolute; border-left: 1px solid #fff; border-bottom: 1px solid #fff; top: 50%; left: 42px; width: 34px; height: 34px;  transform: translate3d(12px, -50%, 0) rotate(45deg); animation: tt4 0.3s forwards; opacity: 0; }
+
+@keyframes tt1 {
+	100% { width: 95%; }
+}
+.banner .s_tt1:before { animation: tt1b 0.3s forwards; }
+@keyframes tt1b {
+	100% { transform: rotate(45deg); width: 20px; opacity: 1; }
+}
+.banner .s_tt1:after { animation: tt1a 0.3s forwards; }
+@keyframes tt1a {
+	100% { transform: rotate(-45deg); width: 20px; opacity: 1; }
+}
+@keyframes tt2 {
+	100% { transform: translate3d(0, 0, 0); opacity: 1; }
+}
+@keyframes tt3 {
+	100% { transform: rotate(0) scale3d(1, 1, 1); }
+}
+@keyframes tt4 {
+	100% { transform: translate3d(0, -50%, 0) rotate(45deg); opacity: 1; }
+}
+
+/*6个圈*/
+.banner .s_tm { position: absolute; left: 130px; top: 0; height: 100%; width: 30px; }
+.banner .s_tm:before, .banner .s_tm:after { position: absolute; content: ""; left: 50%; margin-left: -2px; width: 4px; height: 35%; background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAMCAMAAACHgmeRAAAASFBMVEUAAAD////////////////////////////////////////////////////////////////////////////////////////////neHiwAAAAF3RSTlMAB8P38uzh1cl8bmDYuritn3ZpZlpZS+bWAAEAAABLSURBVAjXJY3HEcAwDMPouMfpjftvGuqEj/DAiXAii8sgJyDMLZO8ETYaO3DqpHYpqeTrcWKGs5CfW1dX1kcWJhqHaa9ROqT2XBs/7oEEJT7boUAAAAAASUVORK5CYII=') center 0 repeat-y; background-size: 100% auto; }
+.banner .s_tm:before { bottom: 65%; }
+.banner .s_tm:after { top: 65%; }
+.banner .s_tm1 { position: absolute; top: 50%; left: 50%; margin: -4px 0 0 -5px; width: 10px; height: 8px; background-color: #fff; border-radius: 50%; }
+.banner .s_tm1 { opacity: 0; transform: scale3d(0, 0, 0); animation: tm1 0.3s forwards; }
+@keyframes tm1 {
+	100% { transform: scale3d(1, 1, 1); opacity: 1; }
+}
+.banner .s_tc { width: 28px; height: 28px; border-radius: 50%; border: 1px solid #fff; position: absolute; top: 50%; left: 50%; margin: -15px 0 0 -15px; content: "";  opacity: 0; animation: tc 0.3s 0.3s forwards;}
+.banner .s_tc1 { margin-top: -20px; transform: scale3d(0, 0, 0) translate3d(0, 5px, 0);}
+.banner .s_tc2 { margin-top: -18px; transform: scale3d(0, 0, 0) translate3d(0, 3px, 0);}
+.banner .s_tc3 { margin-top: -16px; transform: scale3d(0, 0, 0) translate3d(0, 1px, 0);}
+.banner .s_tc4 { margin-top: -14px; transform: scale3d(0, 0, 0) translate3d(0, -1px, 0);}
+.banner .s_tc5 { margin-top: -12px; transform: scale3d(0, 0, 0) translate3d(0, -3px, 0);}
+.banner .s_tc6 { margin-top: -10px; transform: scale3d(0, 0, 0) translate3d(0, -5px, 0);}
+
+@keyframes tc {
+	100% { transform: scale3d(1, 1, 1) translate3d(0, 0, 0); opacity: 1; }
+}
+
+.banner .s_tm:before, .banner .s_tm:after { height: 0; transform: rotateY(360deg); animation: tmba 0.6s forwards; opacity: 0; }
+@keyframes tmba {
+	100% { height: 35%; transform: rotateY(0); opacity: 1; }
+}
+
+/*方便面*/
+.banner .s_tl { position: absolute; right: 0; top: 50%; margin-top: -46px; width: 17px; height: 95px; background: url(../img/fbm.png) center center; background-size: 100% auto; }
+.banner .s_tl { transform: rotateX(360deg); opacity: 0; animation: tl 0.6s forwards; }
+@keyframes tl {
+	100% { transform: rotateX(0); opacity: 1; }
+}

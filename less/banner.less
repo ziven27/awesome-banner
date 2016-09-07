@@ -1,0 +1,21 @@
+.banner { background-color: #1f424e; background-image: linear-gradient(-139deg, #000, #1f424e); overflow: hidden; position: relative; }
+.banner .s_auto{ position: absolute; left: 0; right: 0; bottom: 0; top: 0; margin: auto; }
+.banner .s_center, .banner .s_center_per { position: absolute; top: 50%; left: 50%; }
+.banner .s_center_per { transform: translate3d(-50%, -50%, 0); }
+.banner canvas, .banner .s_bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.banner .s_cloud { width: 40%; padding-top: 40%; transform: translate3d(-16%, -49%,0); background: url(../img/cloud.png) top right no-repeat; background-size: 100%; }
+.banner .s_bg{ opacity: 0; animation: opacityIn 2s 1.3s forwards; }
+.banner .s_cloud{ opacity: 0; animation: opacityIn 0.3s 2s forwards; }
+
+@keyframes opacityIn {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+@import '_banner/_logo.less';
+@import '_banner/_earth.less';
+@import '_banner/_text.less';
+@import '_banner/_border.less';
+@import '_banner/_tt.less';
+@import '_banner/_zIndex.less';
+@import '_banner/_timeLine.less';
